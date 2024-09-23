@@ -43,7 +43,7 @@ if(ADA_TESTING OR ADA_BENCHMARKS OR ADA_TOOLS)
     find_package(benchmark)
   endif()
 
-  if (ADA_TESTING AND NOT EMSCRIPTEN
+  if (ADA_TESTING AND NOT EMSCRIPTEN)
       set(CTEST_TEST_TIMEOUT 5)
       message(STATUS "The tests are enabled.")
       add_subdirectory(tests)
